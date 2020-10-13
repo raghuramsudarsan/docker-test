@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 MAINTAINER raghu
-EXPOSE 8090
+EXPOSE 8000
 RUN apt-get update
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get install apache2 -y
