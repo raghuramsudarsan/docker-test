@@ -1,9 +1,8 @@
-FROM ubuntu:latest
+FROM ubuntu:16.04
 MAINTAINER raghu
-EXPOSE 8000
 RUN apt-get update
-ARG DEBIAN_FRONTEND=noninteractive
-RUN apt-get install apache2 -y
-RUN apt-get install mysql-server -y
-RUN apt-get install php -y
-CMD ["usr/sbin/apache2ctl", "-DFOREGROUND"]
+RUN apt-get install python3 -y
+RUN mkdir /file
+RUN chmod 744 /file*
+COPY simple-python.py /file
+CMD python3 /file/simple-python.py
